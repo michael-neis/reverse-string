@@ -1,5 +1,17 @@
 function reverseString(str) {
-  // type your code here
+  
+  const new_array = []
+
+  const array = str.split('')
+
+  array.forEach(char => {
+    new_array.unshift(char)
+  });
+
+  const new_word = new_array.join('')
+
+  return new_word
+
 }
 
 if (require.main === module) {
@@ -11,6 +23,11 @@ if (require.main === module) {
 
   console.log("Expecting: 'ybabtac'");
   console.log("=>", reverseString("catbaby"));
+  
+  console.log("");
+
+  console.log("Expecting: 'leahciM'");
+  console.log("=>", reverseString("Michael"));
 }
 
 module.exports = reverseString;
